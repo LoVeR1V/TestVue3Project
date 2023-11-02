@@ -4,16 +4,18 @@
         :active-page = "activePage"
     ></navbar>
   
-    <page-viewer
+    <router-view></router-view>
+
+    <!-- <page-viewer
     v-if="pages.length > 0" 
     :page = "pages[activePage]"
-    ></page-viewer>
+    ></page-viewer> -->
 
     
         <!-- creating  a custom event (instead of ":" we use "@") that in CreatePage -->
-    <create-page
+    <!-- <create-page
         @page-created = "pageCreated"
-    ></create-page>
+    ></create-page> -->
 </template>
 
 <script>
