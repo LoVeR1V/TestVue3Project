@@ -124,7 +124,6 @@ export default {
             // we don't need "this.pageCreated();" and anymmore because we create a custom event above
             // object {} from old event we relocate to custom event above
 
-
             // it needs to create a new item in navbar 
            this.pageTitle = '';
            this.content = '';

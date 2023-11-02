@@ -9,8 +9,9 @@
                 <navbar-link
                     v-for="(page, index) in publishedPages" class="nav-item" :key="index" 
                     :page="page"
+                    :index="index"
                     :isActive="activePage === index"
-                    @actived="$emit('acived')">
+                    @actived="$emit('actived')">
                 </navbar-link>                   
             </ul>
             <form class="d-flex">
@@ -38,7 +39,7 @@ export default {
             return this.pages.filter(p => p.published); // it needs to publish a new item in navbar
         }
     },
-    props: ['pages', 'activePage', 'navLinkClick'],
+    props: ['pages', 'activePage'],
             data() {
                 return {
                     theme: 'light',

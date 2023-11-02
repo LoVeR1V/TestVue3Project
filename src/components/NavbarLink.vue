@@ -6,14 +6,15 @@
             aria-current="page" 
             :href="page.link.url"    
             :title="`${page.link.text}`"
-            @click.prevent="$emit('actived')"    
+            @click.prevent="$bus.$emit('navbarLinkActived', index)"    
             >{{ page.link.text }} </a>
     </li>
 </template>
 
 <script>
 export default {
-    props: ['page', 'isActive'],
+    //added 'index' as a property
+    props: ['page','index', 'isActive'],
     computed: {
         activeClasses(){
             return {

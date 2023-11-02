@@ -11,7 +11,7 @@ export default {
         if (!events.has(eventName)){  // check if we have a key with a the given event name
             events.set(eventName, []);
         } 
-        events.get(eventName).push(fn) // push in the function that that we wanted to listen for
+        events.get(eventName).push(fn); // push in the function that that we wanted to listen for
     },
     //something similar to revome an event
     $off(eventName, fn) {
@@ -19,9 +19,9 @@ export default {
     },
     // a method that emit our event to trigger it
     $emit(eventName, data) {
-        if (events.has(events)) {
-            events.get(eventName).array.forEach(fn => {
-                (data)
+        if (events.has(eventName)) {
+            events.get(eventName).forEach(fn => {
+                fn(data)            
             }); // get this array and simply use forEach method to execute the function
                 //passing in the data
         }
