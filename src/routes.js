@@ -5,7 +5,8 @@ import CreatePage from './components/CreatePage.vue'
 const router = createRouter({
     history: createWebHashHistory(),
     routes: [
-        { path: '/', component: PageViewer },
+        // use "?" to make index optional 
+        { path: '/:index?', component: PageViewer },
         { path: '/create', component: CreatePage}
     ]
 });
